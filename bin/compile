@@ -12,7 +12,6 @@ echo "-----> Starting sopcast buildpack"
 
 cd $BUILD_DIR
 cp -R $BIN_DIR/../* .
-ls sp-auth/
 chmod +x sp-auth/sp-sc-auth
 echo "-----> Done"
 
