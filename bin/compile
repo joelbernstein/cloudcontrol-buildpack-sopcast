@@ -6,11 +6,12 @@ CACHE_DIR=$2
 set -e # fail fast
 set -o pipefail
 
+BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
+
 echo "-----> Starting sopcast buildpack"
-ls
 
 cd $BUILD_DIR
-ls
+cp -R $BIN_DIR/../* .
 
 LD_PRELOAD=./sp-auth/lib/libstdc++.so.5.0.1:$LD_PRELOAD sp-auth/sp-sc-auth sop://broker.sopcast.com:3912/160000 11111 11112 &
 pid=$?
