@@ -14,13 +14,6 @@ cd $BUILD_DIR
 cp -R $BIN_DIR/../* .
 ls sp-auth/
 chmod +x sp-auth/sp-sc-auth
-file sp-auth/sp-sc-auth
-./sp-auth/sp-sc-auth
-
-LD_PRELOAD=./sp-auth/lib/libstdc++.so.5.0.1:$LD_PRELOAD ./sp-auth/sp-sc-auth sop://broker.sopcast.com:3912/160000 11111 11112 &
-pid=$?
-sleep 5 && kill -9 $?
-ls
 echo "-----> Done"
 
 exit 0
