@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 PORT=$1
-LD_PRELOAD=./sp-auth/lib/libstdc++.so.5:$LD_PRELOAD ./sp-auth/sp-sc-auth sop://broker.sopcast.com:3912/160000 11111 $PORT
-
+export LD_LIBRARY_PATH=/app/sp-auth/lib:$LD_LIBRARY_PATH
+/app/sp-auth/sp-sc-auth sop://broker.sopcast.com:3912/160000 11111 $PORT
