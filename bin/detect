@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# bin/detect <build-dir>
+BUILD_DIR=$1
+
+set -e # fail fast
+set -o pipefail
+
+cd $BUILD_DIR
+echo Sopcast
+exit 0
