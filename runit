@@ -4,4 +4,4 @@ PORT=$1
 ls >&2
 
 export LD_LIBRARY_PATH=sp-auth/lib:$LD_LIBRARY_PATH
-sp-auth/sp-sc-auth sop://broker.sopcast.com:3912/160000 11111 $PORT
+sp-auth/sp-sc-auth sop://broker.sopcast.com:3912/160000 11111 $PORT >&2
