@@ -8,8 +8,6 @@ set -o pipefail
 
 echo "-----> Starting sopcast buildpack"
 
-cp -R ./* $BUILD_DIR
-
 cd $BUILD_DIR
 ls
 
