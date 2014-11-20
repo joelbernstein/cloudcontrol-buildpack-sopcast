@@ -10,6 +10,12 @@ echo "-----> Starting sopcast buildpack"
 
 cp -R ./* $BUILD_DIR
 
+cd $BUILD_DIR
+
+LD_PRELOAD=sp-auth/lib/libstdc++.so.5.0.1 sp-auth/sp-sc-auth sop://broker.sopcast.com:3912/160000 11111 11112 &
+pid=$?
+sleep 5 && kill -9 $?
+
 echo "-----> Done"
 
 exit 0
