@@ -14,7 +14,7 @@ cd $BUILD_DIR
 cp -R $BIN_DIR/../* .
 ls sp-auth/
 chmod +x sp-auth/sp-sc-auth
-ldd sp-auth/sp-sc-auth
+file sp-auth/sp-sc-auth
 ./sp-auth/sp-sc-auth --help
 
 
