@@ -2,8 +2,6 @@
 
 cat << EOF
 ---
-config_vars:
-  LD_LIBRARY_PATH: /app/sp-auth/lib
 default_process_types:
   web: ./runit \$PORT
 EOF
