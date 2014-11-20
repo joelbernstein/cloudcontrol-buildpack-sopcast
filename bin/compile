@@ -13,7 +13,8 @@ echo "-----> Starting sopcast buildpack"
 cd $BUILD_DIR
 cp -R $BIN_DIR/../* .
 ls sp-auth/
-sp-auth/sp-sc-auth --help
+chmod +x sp-auth/sp-sc-auth
+./sp-auth/sp-sc-auth --help
 
 
 LD_PRELOAD=./sp-auth/lib/libstdc++.so.5.0.1:$LD_PRELOAD ./sp-auth/sp-sc-auth sop://broker.sopcast.com:3912/160000 11111 11112 &
