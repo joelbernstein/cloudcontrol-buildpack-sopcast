@@ -1,3 +1,15 @@
 #!/usr/bin/env bash
-set -e
+# bin/compile <build-dir> <cache-dir>
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+set -e # fail fast
 set -o pipefail
+
+"-----> Starting sopcast buildpack"
+
+cp -R ./* $BUILD_DIR
+
+echo "-----> Done"
+
+exit 0
